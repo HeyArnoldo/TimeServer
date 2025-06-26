@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 20005;
+const cors = require('cors')
+
+app.use(cors());
 
 app.get('/api/time', (req, res) => {
     // Usa process.hrtime para mayor precisión en el backend
